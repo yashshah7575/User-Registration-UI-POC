@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { UserServiceService } from './Service/user-service.service';
 import { EmailComponentComponent } from './email-component/email-component.component';
 import { PhoneComponent } from './phone/phone.component';
+import { DatePipe } from '@angular/common';
 
 //import { ListUsersComponent } from './list-users/list-users.component';
 //import { AddUserComponent } from './add-user/add-user.component';
@@ -29,7 +30,7 @@ import { PhoneComponent } from './phone/phone.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [UserServiceService],
+  providers: [UserServiceService, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

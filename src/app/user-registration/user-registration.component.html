@@ -1,83 +1,5 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--
-<div class="container">
-<form (ngSubmit)="onSubmit()" #userForm="ngForm">
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text"
-     class="form-control"
-     id="name"
-     name="name"
-     aria-describedby="Name"
-     placeholder="Enter name"
-     [(ngModel)]="user.name"
-     #name="ngModel">
-  </div>
-  <div class="form-group">
-    <label for="Email">Email</label>
-    <input type="text"
-        class="form-control"
-        id="Email"
-        name="email"
-        placeholder="Email"
-        [(ngModel)]="user.email"
-        #email="ngModel"
-        >
-  </div>
-
-  <div class="form-group">
-    <input type="text"
-     class="form-control"
-     id="userName"
-     name="userName"
-     aria-describedby="Name"
-     placeholder="User name" required>
-  </div>
-
-  <div class="form-group">
-    <input type="text"
-     class="form-control"
-     id="email"
-     name="email"
-     aria-describedby="email"
-     placeholder="Email" required>
-  </div>
-
-  <app-email-component></app-email-component>
-
-  <app-phone></app-phone>
-
-  <div class="form-group">
-    <select class="form-control">
-      <option> Job Description </option>
-      <option>CFO</option>
-      <option>COO</option>
-      <option>Accountant</option>
-      <option>Manager</option>
-      <option>Sr. Manager</option>
-      <option>Front Desk</option>
-    </select>
-  </div>
-
-  <div class="form-group">
-    <select class="form-control">
-      <option> Business Unit </option>
-      <option>Marketing</option>
-      <option>Sales</option>
-      <option>Accounting</option>
-      <option>IT</option>
-      <option>Finance</option>
-      <option>Operation</option>
-    </select>
-  </div>
-
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-</div>
--->
-
-<!--Another approach-->
 <div class="container-md center"
     style="background-color: #F1F1F1;
      padding:5px; border:7px solid #bebfbf;">
@@ -92,18 +14,28 @@
             <div class="form-group">
               <input type="text"
                class="form-control"
-               id="userName"
-               name="userName"
-               aria-describedby="Name"
-               placeholder="User name" required>
+               id="username"
+               name="username"
+               aria-describedby="username"
+               placeholder="User name"
+               [(ngModel)]="user.userName"
+               #name="ngModel"
+               required>
             </div>
 
-                <app-email-component></app-email-component>
+            <app-email-component></app-email-component>
 
-                <app-phone></app-phone>
+            <app-phone></app-phone>
 
             <div class="form-group">
-              <select class="form-control">
+              <select class="form-control"
+                    id="jobDescription"
+                    name="jobDescription"
+                    aria-describedby="jobDescription"
+                    placeholder="Job Description"
+                    [(ngModel)]="user.jobDescription"
+                    #name="ngModel"
+                >
                 <option hidden> Job Description </option>
                 <option>CFO</option>
                 <option>COO</option>
@@ -115,7 +47,14 @@
             </div>
 
             <div class="form-group">
-              <select class="form-control">
+              <select class="form-control"
+                  id="businessUnit"
+                  name="businessUnit"
+                  aria-describedby="businessUnit"
+                  placeholder="Business Unit"
+                  [(ngModel)]="user.businessUnit"
+                  #name="ngModel"
+                >
                 <option hidden> Business Unit </option>
                 <option>Marketing</option>
                 <option>Sales</option>
